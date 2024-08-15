@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ---------------------home-------------- -->
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a class="logo" href="index.html">Rajeswari Katasani</a>
+          <ul id="sidemenu">
+            <li><a href="#header" class="home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>HELLO!</p>
+          <h1>I'm <span>Rajeswari Katasani</span></h1>
+          <!-- Element to contain animated typing -->
+          <span id="typing-animation"></span>
+          <script>
+            // Initialize the typing animation
+            const typingAnimationElement =
+              document.getElementById("typing-animation");
+
+            // Create an array of typing text
+            const typingTexts = ["Curious  ", "Creative  ", "Committed   "];
+
+            // Create a function to display the typing animation for a given text
+            function playTypingAnimation(text) {
+              // Loop through each character and add it to the element
+              for (let i = 0; i < text.length; i++) {
+                setTimeout(() => {
+                  typingAnimationElement.textContent += text[i];
+                }, i * 200); // Increase the delay to slow down the typing animation
+              }
+
+              // Once the animation is complete, reset the text and start over
+              setTimeout(() => {
+                typingAnimationElement.textContent = "";
+                playTypingAnimation(
+                  typingTexts[
+                    (typingTexts.indexOf(text) + 1) % typingTexts.length
+                  ]
+                );
+              }, text.length * 200);
+            }
+
+            // Start the typing animation loop
+            playTypingAnimation(typingTexts[0]);
+          </script>
+          <br />
+
+          <h2>A Software Engineer</h2>
+          <div class="social-media">
+            <a href="https://github.com/Rajeswari712" target="_blank">
+              <img
+                src="images/github_logo.png"
+                alt="GitHub"
+                class="social-icon github-icon"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/katasani-rajeswari/"
+              target="_blank"
+            >
+              <img
+                src="images/linkedin_logo.png"
+                alt="LinkedIn"
+                class="social-icon linkedin-icon"
+              />
+            </a>
+
+            <a
+              href="Resume/K Rajeswari - Resume .pdf"
+              download="Rajeswari_Katasani_Resume.pdf"
+              class="resume-button"
+            >
+              Resume
+            </a>
+          </div>
+
+          <div class="img-container">
+            <img
+              src="images/image_rk.png"
+              alt="Rajeswari Katasani"
+              class="profile-image"
+            />
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------about-------------- -->
+    <div id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h1 class="sub-title"><strong>About Me</strong></h1>
+          <p>
+            With over 4 years of experience in the field of Software
+            Engineering, excited to explore the dynamic world of software
+            engineering, where creativity meets logic and innovation drives
+            impact!
+          </p>
+        </div>
+        <div class="tabs">
+          <div class="tab active" id="skills-tab" onclick="showTab('skills')">
+            Skills
+          </div>
+          <div class="tab" id="experience-tab" onclick="showTab('experience')">
+            Experience
+          </div>
+          <div class="tab" id="education-tab" onclick="showTab('education')">
+            Education
+          </div>
+        </div>
+        <div class="tab-content">
+          <div id="skills-content" class="content active">
+            <div class="skillList">
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Java</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>SQL</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+            <hr />
+            <div class="skillList">
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>SpringBoot</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Rest APIs</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Microservices</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Hibernate</span>
+              </div>
+            </div>
+            <hr />
+            <div class="skillList">
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Data Structures & Algorithms</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Agile</span>
+              </div>
+            </div>
+            <hr />
+            <div class="skillList">
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Bit Bucket</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>IntelliJ</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Visual Studio Code</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Apache Tomcat</span>
+              </div>
+            </div>
+            <hr />
+            <div class="skillList">
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Team Player</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Bias for action</span>
+              </div>
+              <div class="skillItem">
+                <img src="images/tick_symbol.png" alt="Check mark" />
+                <span>Deliver results</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="education-content" class="content">
+            <p class="date">
+              <strong>Jan 2023 - May 2024</strong>
+            </p>
+            <br />
+            <h3>Master's in Computer Science</h3>
+            <br />
+            <p class="highlight">University of Missouri St Louis, USA</p>
+
+            <hr />
+            <p class="date"><strong>Jun 2014 - May 2018</strong></p>
+            <br />
+            <h3>BTech in Information Technology</h3>
+            <br />
+            <p class="highlight">Vellore Institute of Technology, India</p>
+          </div>
+          <div id="experience-content" class="content">
+            <p class="date"><strong>Aug 2022 - Dec 2022</strong></p>
+            <br />
+            <h3>Software Developer</h3>
+            <br />
+            <p class="highlight">Cognizant Technology Solutions, India</p>
+            <hr />
+
+            <p class="date"><strong>Jan 2019 - Aug 2022</strong></p>
+            <br />
+            <h3>Systems Engineer</h3>
+            <br />
+            <p class="highlight">Tata Consultancy Services, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------------projects-------------- -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title"><strong>Projects</strong></h1>
+        <div class="projects-list">
+          <div class="project">
+            <img src="images/proj_1.jpg" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                This app connects you to other people in world.Download it from
+                play store
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project">
+            <img src="images/proj_2.jpg" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                This app connects you to other people in world.Download it from
+                play store
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="project">
+            <img src="images/proj_3.jpg" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>
+                This app connects you to other people in world.Download it from
+                play store
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- uncomment below for the see more button -->
+        <!-- <a href="#" class="btn">See more</a> -->
+        <!-- Coming Soon message, comment if the original projects are displayed -->
+        <div class="coming-soon">
+          <h2>Coming Soon...</h2>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------contact-------------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="contact-text">
+          <h1 class="sub-title"><strong>Contact Me</strong></h1>
+          <div class="email-address">
+            <img
+              src="images/gmail-logo.png"
+              alt="Mail Logo"
+              class="mail-logo"
+            />
+            <a href="mailto:rajeswari.katasani1997@gmail.com"
+              >rajeswari.katasani1997@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>
+        Copyright <i class="fa-regular fa-copyright"></i> Rajeswari Katasani
+      </p>
+    </div>
+
+    <script>
+      function showTab(tabName) {
+        // Hide all tab content
+        var contents = document.querySelectorAll(".content");
+        contents.forEach(function (content) {
+          content.classList.remove("active");
+        });
+
+        // Remove active class from all tabs
+        var tabs = document.querySelectorAll(".tab");
+        tabs.forEach(function (tab) {
+          tab.classList.remove("active");
+        });
+
+        // Show the selected tab content
+        document.getElementById(tabName + "-content").classList.add("active");
+        document.getElementById(tabName + "-tab").classList.add("active");
+      }
+      // Initialize the default tab (Skills) to be visible
+      document.addEventListener("DOMContentLoaded", function () {
+        showTab("skills");
+      });
+    </script>
+
+    <script>
+      var sidemeu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemeu.style.right = "0";
+      }
+      function closemenu() {
+        sidemeu.style.right = "-200px";
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to handle active link highlighting based on scroll position
+        function updateActiveLink() {
+          const sections = document.querySelectorAll("div[id]");
+          const navLinks = document.querySelectorAll("nav ul li a");
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 50; // Adjust for fixed navbar height
+            const sectionHeight = section.offsetHeight;
+
+            if (
+              window.scrollY >= sectionTop &&
+              window.scrollY < sectionTop + sectionHeight
+            ) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (
+                  link.getAttribute("href").substring(1) ===
+                  section.getAttribute("id")
+                ) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        }
+
+        // Update active link on scroll
+        window.addEventListener("scroll", updateActiveLink);
+
+        // Initial call to set the correct active link when page loads
+        updateActiveLink();
+      });
+    </script>
+  </body>
+</html>
